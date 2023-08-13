@@ -1,15 +1,19 @@
-﻿using System;
+using System;
 using System.IO;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text;
+using System.Collections;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
-namespace TestShortcut
+ 
+namespace Appbatroz
 {
     class shellLink
     {
        public static void make(string argument, string icon, string filename, string description)
         {
+      
             IShellLink link = (IShellLink)new ShellLink();
 
             // setup shortcut information
@@ -22,8 +26,59 @@ namespace TestShortcut
             IPersistFile file = (IPersistFile)link;
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
             file.Save(Path.Combine(desktopPath, filename+".lnk"), false);
+         
         }
     }
+		[ComImportAttribute()]
+
+		[GuidAttribute("0000010C-0000-0000-C000-000000000046")]
+
+		[InterfaceTypeAttribute(ComInterfaceType.InterfaceIsIUnknown)]
+
+		public interface IPersist
+
+		{
+
+			[PreserveSig]
+
+			void GetClassID(out Guid pClassID);
+
+		}
+		[ComImportAttribute()]
+
+		[GuidAttribute("0000010B-0000-0000-C000-000000000046")]
+
+		[InterfaceTypeAttribute(ComInterfaceType.InterfaceIsIUnknown)]
+
+		public interface IPersistFile
+
+		{
+
+			[PreserveSig]
+
+			void GetClassID(out Guid pClassID);
+
+
+
+			void IsDirty();
+
+
+
+			void Load([MarshalAs(UnmanagedType.LPWStr)] string pszFileName, uint dwMode);
+
+
+
+			void Save([MarshalAs(UnmanagedType.LPWStr)] string pszFileName, [MarshalAs(UnmanagedType.Bool)] bool fRemember);
+
+
+
+			void SaveCompleted([MarshalAs(UnmanagedType.LPWStr)] string pszFileName);
+
+
+
+			void GetCurFile([MarshalAs(UnmanagedType.LPWStr)] out string ppszFileName);
+
+		}
 
     [ComImport]
     [Guid("00021401-0000-0000-C000-000000000046")]
@@ -55,4 +110,5 @@ namespace TestShortcut
         void Resolve(IntPtr hwnd, int fFlags);
         void SetPath([MarshalAs(UnmanagedType.LPWStr)] string pszFile);
     }
+    
 }
