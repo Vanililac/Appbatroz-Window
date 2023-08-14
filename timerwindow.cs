@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using Gtk;
 using UI = Gtk.Builder.ObjectAttribute;
-
+using Appbatroz;
 namespace Appbatroz
 {
     class timerwindow : Window
@@ -459,7 +459,7 @@ public timerwindow() : this(new Builder("timerwindow.glade")) { }
             md.Destroy();
                 }
                 else{
-                TestShortcut.shellLink.make(ftxt,last,entry21.Text,entry22.Text);
+                shellLink.make(ftxt,last,entry21.Text,entry22.Text);
                  cle();
                 }
  
