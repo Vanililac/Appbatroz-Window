@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using Gtk;
 using UI = Gtk.Builder.ObjectAttribute;
-
+using Appbatroz;
 namespace Appbatroz
 {
     class multilaunch : Window
@@ -254,7 +254,7 @@ public multilaunch() : this(new Builder("multilaunch.glade")) { }
             mds.Run();
             mds.Destroy();
            }else{
-            TestShortcut.shellLink.make(ftxt,last,entry21.Text,entry22.Text);
+            shellLink.make(ftxt,last,entry21.Text,entry22.Text);
 
             entry1.Text = "";
             entry2.Text = "";
