@@ -16,7 +16,7 @@
           <object class="GtkEntry" id="entry1">
             <property name="visible">True</property>
             <property name="can-focus">True</property>
-            <signal name="key-release-event" handler="OnEntry1KeyReleaseEvent" swapped="no"/>
+            
           </object>
           <packing>
             <property name="expand">False</property>

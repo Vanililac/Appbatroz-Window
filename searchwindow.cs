@@ -12,13 +12,14 @@ namespace Appbatroz
         [UI] private TextView textview1 = null;
 
         private int _counter;
-        string[] listexe;
+string[] listexe;
         public searchwindow() : this(new Builder("searchwindow.glade")) { }
 
         private searchwindow(Builder builder) : base(builder.GetRawOwnedObject("searchwindow"))
         {
             string a = "";
             builder.Autoconnect(this);
+            entry1.KeyReleaseEvent += OnEntry1KeyReleaseEvent;
 foreach (string ln in ExecuteCommand())
             {
 
@@ -26,7 +27,8 @@ foreach (string ln in ExecuteCommand())
 
             }
             textview1.Buffer.Text = a;
-            listexe = ExecuteCommand();           
+             listexe= ExecuteCommand();
+            
           //  DeleteEvent += Window_DeleteEvent;
          //   _button1.Clicked += Button1_Clicked;
         }

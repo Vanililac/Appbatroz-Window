@@ -8,7 +8,7 @@
     <property name="resizable">False</property>
     <property name="default-width">230</property>
     <property name="default-height">175</property>
-    <property name="icon">.\share\icons\appbt_2_.ico</property>
+    <property name="icon">share\icons\appbt_2_.ico</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
@@ -96,6 +96,18 @@
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="label" translatable="yes">Appbatroz By Opeqi</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">6</property>
           </packing>
         </child>
       </object>

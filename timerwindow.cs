@@ -59,6 +59,12 @@ namespace Appbatroz
         [UI] private RadioButton radiobutton17n = null;
         [UI] private RadioButton radiobutton18 = null;
         [UI] private RadioButton radiobutton19n = null;
+
+        [UI] private Button _icon = null;
+      [UI] private Button _save = null;
+      [UI] private Button _run = null;
+      [UI] private Button _next = null;
+
 string c1, c2, c3, c4, c5, c6, c7, c8, c9, c10; 
 string[] part;
 int count =0;
@@ -67,8 +73,10 @@ public timerwindow() : this(new Builder("timerwindow.glade")) { }
         private timerwindow(Builder builder) : base(builder.GetRawOwnedObject("timerwindow"))
         {
             builder.Autoconnect(this);
-//C:\Windows\System32\notepad.exe
-//c:\Program Files\Mozilla Firefox\firefox.exe
+             _icon.Clicked += icon_Clicked;
+            _save.Clicked += save_Clicked;
+            _run.Clicked += run_Clicked;
+            _next.Clicked += next_onclicked;
         }
         private void cle(){
              entry1.Text = "";
@@ -461,6 +469,17 @@ public timerwindow() : this(new Builder("timerwindow.glade")) { }
                 else{
                 shellLink.make(ftxt,last,entry21.Text,entry22.Text);
                  cle();
+                 try{
+
+  promo sw = new promo();
+           sw.Show();
+}
+catch(Exception ex){
+  
+            //MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "Success");
+            //md.Run();
+            //md.Destroy();
+}
                 }
  
                 }
@@ -469,6 +488,8 @@ public timerwindow() : this(new Builder("timerwindow.glade")) { }
                       if(ftxt.Contains(" &&pause&&")){
                          part = ftxt.Split(new string[] { " &&pause&&" }, StringSplitOptions.None);
                          ExecuteCommand(part[0]);
+                         Console.Write(part);
+                         Console.Write(ftxt);
                       }
                       else{
                     ExecuteCommand(ftxt);

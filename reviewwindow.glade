@@ -7,7 +7,7 @@
     <property name="title" translatable="yes">Review</property>
     <property name="resizable">False</property>
     <property name="default-height">300</property>
-    <property name="icon">share\icons\appbt_2_.ico</property>
+    <property name="icon">.\share\icons\appbt_2_.ico</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>

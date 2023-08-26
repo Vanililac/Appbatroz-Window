@@ -8,7 +8,7 @@
     <property name="resizable">False</property>
     <property name="default-width">230</property>
     <property name="default-height">175</property>
-    <property name="icon">share\icons\appbt_2_.ico</property>
+    <property name="icon">.\share\icons\appbt_2_.ico</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
@@ -20,7 +20,7 @@
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <signal name="clicked" handler="Button1_Clicked" swapped="no"/>
+            
           </object>
           <packing>
             <property name="expand">False</property>
@@ -29,12 +29,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="_sl">
             <property name="label" translatable="yes">Set Launch</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <signal name="clicked" handler="set_Clicked" swapped="no"/>
+            
           </object>
           <packing>
             <property name="expand">False</property>
@@ -43,12 +43,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="_bm">
             <property name="label" translatable="yes">Bookmark</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <signal name="clicked" handler="bookmark_Clicked" swapped="no"/>
+            
           </object>
           <packing>
             <property name="expand">False</property>
@@ -57,12 +57,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="_search">
             <property name="label" translatable="yes">Search</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <signal name="clicked" handler="search_Clicked" swapped="no"/>
+            
           </object>
           <packing>
             <property name="expand">False</property>
@@ -71,12 +71,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="_nb">
             <property name="label" translatable="yes">New Bookmark</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <signal name="clicked" handler="Button2_Clicked" swapped="no"/>
+            
           </object>
           <packing>
             <property name="expand">False</property>
@@ -85,12 +85,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkButton">
+          <object class="GtkButton" id="_tutorial">
             <property name="label" translatable="yes">Tutorial</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
-            <signal name="clicked" handler="tutorial_Clicked" swapped="no"/>
+            
           </object>
           <packing>
             <property name="expand">False</property>

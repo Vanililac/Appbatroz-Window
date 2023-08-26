@@ -23,12 +23,12 @@
                 <property name="can-focus">False</property>
                 <property name="spacing">5</property>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="_all">
                     <property name="label" translatable="yes">All</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
-                    <signal name="clicked" handler="all_Clicked" swapped="no"/>
+                    
                   </object>
                   <packing>
                     <property name="expand">True</property>
@@ -237,12 +237,12 @@
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="_run">
                         <property name="label" translatable="yes">Run</property>
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
-                        <signal name="clicked" handler="run_Clicked" swapped="no"/>
+                        
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -251,12 +251,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="_open">
                         <property name="label" translatable="yes">Open</property>
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
-                        <signal name="clicked" handler="open_Clicked" swapped="no"/>
+                        
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -265,12 +265,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="_delete">
                         <property name="label" translatable="yes">Delete</property>
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
-                        <signal name="clicked" handler="delete_Clicked" swapped="no"/>
+                        
                       </object>
                       <packing>
                         <property name="expand">True</property>

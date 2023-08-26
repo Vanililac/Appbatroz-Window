@@ -9,8 +9,12 @@ namespace Appbatroz
     {
      
        [UI] private Button _button1 = null;
-
-        private int _counter;
+      [UI] private Button _sl = null;
+      [UI] private Button _bm = null;
+      [UI] private Button _search = null;
+      [UI] private Button _nb = null;
+      [UI] private Button _tutorial = null;
+        
 
         public MainWindow() : this(new Builder("MainWindow.glade")) { }
 
@@ -19,7 +23,12 @@ namespace Appbatroz
             builder.Autoconnect(this);
      
             DeleteEvent += Window_DeleteEvent;
-         //   _button1.Clicked += Button1_Clicked;
+            _button1.Clicked += Button1_Clicked;
+            _sl.Clicked += set_Clicked;
+            _bm.Clicked += bookmark_Clicked;
+            _search.Clicked += search_Clicked;
+            _nb.Clicked += Button2_Clicked;
+            _tutorial.Clicked += tutorial_Clicked;
         }
 
         private void Window_DeleteEvent(object sender, DeleteEventArgs a)
@@ -43,7 +52,8 @@ namespace Appbatroz
          private void search_Clicked(object sender, EventArgs a)
         {
        
-           searchwindow sw = new searchwindow();
+          searchwindow sw = new searchwindow();
+          
            sw.Show();
        
         }

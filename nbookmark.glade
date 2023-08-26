@@ -7,7 +7,7 @@
     <property name="title" translatable="yes">New Bookmark</property>
     <property name="resizable">False</property>
     <property name="default-height">300</property>
-    <property name="icon">share\icons\appbt_2_.ico</property>
+    <property name="icon">.\share\icons\appbt_2_.ico</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
@@ -171,12 +171,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="_save">
                         <property name="label" translatable="yes">Save</property>
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
-                        <signal name="clicked" handler="save_Clicked" swapped="no"/>
+                        
                       </object>
                       <packing>
                         <property name="expand">True</property>
@@ -185,12 +185,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="_cancel">
                         <property name="label" translatable="yes">Cancel</property>
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
-                        <signal name="clicked" handler="cancel_Clicked" swapped="no"/>
+                        
                       </object>
                       <packing>
                         <property name="expand">True</property>

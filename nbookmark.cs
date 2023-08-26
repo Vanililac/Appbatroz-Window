@@ -17,6 +17,8 @@ namespace Appbatroz
               [UI] private Entry entry3 = null;
               [UI] private TextView textview1 = null;
        
+        [UI] private Button _save = null;
+      [UI] private Button _cancel = null;
 
         private int _counter;
 
@@ -24,6 +26,8 @@ namespace Appbatroz
 
         private nbookmark(Builder builder) : base(builder.GetRawOwnedObject("nbookmark"))
         {
+         
+
             string text;
             string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal) ;
             if (File.Exists(folder+ "/appbatrozwin/appbatroztext/" + "bmrk.txt"))
@@ -53,7 +57,8 @@ namespace Appbatroz
             }
 
             builder.Autoconnect(this);
-
+    _save.Clicked += save_Clicked;
+         _cancel.Clicked += cancel_Clicked;
            // DeleteEvent += Window_DeleteEvent;
          //   _button1.Clicked += Button1_Clicked;
         }
@@ -98,7 +103,8 @@ namespace Appbatroz
 
         protected void cancel_Clicked(object sender, EventArgs e)
         {
-            Environment.Exit(Environment.ExitCode);
+          
+        this.Close();
         }
         public string PrettyPrintArrayOfArrays(string[][] arrayOfArrays)
         {

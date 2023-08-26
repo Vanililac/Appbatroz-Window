@@ -788,12 +788,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="_icon">
                 <property name="label" translatable="yes">Icon</property>
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="receives-default">True</property>
-                <signal name="clicked" handler="ofd_Clicked" swapped="no"/>
+                
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -818,12 +818,12 @@
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="_save">
                     <property name="label" translatable="yes">Save</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
-                    <signal name="clicked" handler="save_Clicked" swapped="no"/>
+                    
                   </object>
                   <packing>
                     <property name="expand">True</property>

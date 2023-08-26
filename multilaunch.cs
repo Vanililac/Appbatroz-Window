@@ -32,13 +32,16 @@ namespace Appbatroz
          [UI] private Entry entry21 = null;
         [UI] private Entry entry22 = null;
         [UI] private Entry entry23 = null;
+             [UI] private Button _save = null;
+      [UI] private Button _icon = null;
  
 public multilaunch() : this(new Builder("multilaunch.glade")) { }
 
         private multilaunch(Builder builder) : base(builder.GetRawOwnedObject("multilaunch"))
         {
             builder.Autoconnect(this);
-
+_save.Clicked += save_Clicked;
+         _icon.Clicked += ofd_Clicked;
 
         }
  private void save_Clicked(object sender, EventArgs a)
@@ -280,16 +283,28 @@ public multilaunch() : this(new Builder("multilaunch.glade")) { }
             entry22.Text = "";
             entry23.Text = "";
           
-
-            MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "Success");
+try{
+MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "Success");
             md.Run();
             md.Destroy();
+  promo sw = new promo();
+           sw.Show();
+}
+catch(Exception ex){
+  
+            //MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "Success");
+            //md.Run();
+            //md.Destroy();
+}
+           
             }
             
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.Message);
+           MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, ex.Message);
+            md.Run();
+            md.Destroy();
         }
 
           

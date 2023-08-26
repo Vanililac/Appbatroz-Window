@@ -17,6 +17,12 @@ namespace Appbatroz
        [UI] private Entry entry3 = null;
        [UI] private Viewport scrolledwindow1 = null;
        [UI] private Box vbox4 = null;
+
+       [UI] private Button _delete = null;
+      [UI] private Button _open = null;
+      [UI] private Button _run = null;
+      [UI] private Button _all = null;
+
         List<string> lists = new List<string>();
         List<string> gdup = new List<string>();
         List<string[]> fl = new List<string[]>();
@@ -31,6 +37,10 @@ namespace Appbatroz
         {
             builder.Autoconnect(this);
 
+     _delete.Clicked += delete_Clicked;
+            _open.Clicked += open_Clicked;
+            _run.Clicked += run_Clicked;
+            _all.Clicked += all_Clicked;
 
             string text;
             //scrolledwindow1.Remove(vb);
