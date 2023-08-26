@@ -469,17 +469,7 @@ public timerwindow() : this(new Builder("timerwindow.glade")) { }
                 else{
                 shellLink.make(ftxt,last,entry21.Text,entry22.Text);
                  cle();
-                 try{
-
-  promo sw = new promo();
-           sw.Show();
-}
-catch(Exception ex){
-  
-            //MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "Success");
-            //md.Run();
-            //md.Destroy();
-}
+               
                 }
  
                 }
