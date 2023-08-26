@@ -283,19 +283,11 @@ _save.Clicked += save_Clicked;
             entry22.Text = "";
             entry23.Text = "";
           
-try{
-MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "Success");
+ 
+            MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "Success");
             md.Run();
             md.Destroy();
-  promo sw = new promo();
-           sw.Show();
-}
-catch(Exception ex){
-  
-            //MessageDialog md = new MessageDialog(null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "Success");
-            //md.Run();
-            //md.Destroy();
-}
+
            
             }
             
