@@ -4,9 +4,9 @@ Download release version at "https://appbatroz.000webhostapp.com/".
 
 #Requirement
 
-.Net 6
-GTK3
-Glade
+- .Net 6
+- GTK3
+- Glade
 
 #How to Install GTK3 using MSYS2
 1. Download & install MSYS2 from this link "https://www.msys2.org/"
