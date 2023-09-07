@@ -86,7 +86,7 @@
         </child>
         <child>
           <object class="GtkButton" id="_tutorial">
-            <property name="label" translatable="yes">Tutorial</property>
+            <property name="label" translatable="yes">About, Tutorial, Licenses</property>
             <property name="visible">True</property>
             <property name="can-focus">True</property>
             <property name="receives-default">True</property>
