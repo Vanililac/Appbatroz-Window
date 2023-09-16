@@ -1,6 +1,5 @@
 # Appbatroz-Window
 Makes desktop launcher for one or multiple apps, set launch apps (Experimental), Bookmark file or website with notes.
-Download release version at "https://appbatroz.000webhostapp.com/".
 
 #Requirement
 
@@ -17,3 +16,11 @@ Download release version at "https://appbatroz.000webhostapp.com/".
 2. "https://github.com/miegir/GTK-for-Windows-Runtime-Environment-Installer-32/releases/tag/2021-12-08" for win_x32
    
 If you want the bundled version, download the release version directly on the website
+
+for(32 Bit)
+
+[![Download Appbatroz (Windows_32bit)](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/appbatroz-windows-32bit/files/latest/download)
+
+for (64 Bit)
+
+[![Download Appbatroz (Windows_64bit)](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/appbatroz-windows/files/latest/download)
